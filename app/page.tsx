@@ -13,14 +13,17 @@ import Reveal from "../components/Reveal";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#050506] text-white">
+      {/* NAVBAR */}
       <Navbar />
 
       {/* HERO */}
       <section className="relative flex min-h-screen items-center overflow-hidden pt-16">
-        {/* Background effects */}
+        {/* Background Effects */}
         <div className="pointer-events-none absolute inset-0">
+          {/* Blue Glow */}
           <div className="absolute left-1/2 top-1/3 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[140px]" />
 
+          {/* Grid */}
           <div
             className="absolute inset-0 opacity-[0.12]"
             style={{
@@ -63,6 +66,7 @@ export default function Home() {
 
             {/* CTA Buttons */}
             <div className="mt-10 flex flex-wrap gap-4">
+              {/* Primary Button */}
               <a
                 href="#projects"
                 className="rounded-full bg-blue-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_25px_rgba(59,130,246,0.25)] transition-all duration-300 hover:bg-blue-400 hover:shadow-[0_0_35px_rgba(59,130,246,0.4)]"
@@ -70,17 +74,19 @@ export default function Home() {
                 View My Work →
               </a>
 
+              {/* CV */}
               <a
                 href="/aqil_jesoor_resume.pdf"
                 download
-                className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-zinc-300 transition hover:border-blue-400/40 hover:bg-blue-500/10 hover:text-white"
+                className="rounded-full border border-white/10 bg-white/[0.02] px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:border-blue-400/40 hover:bg-blue-500/10 hover:text-white"
               >
                 Download CV ↓
               </a>
 
+              {/* Contact */}
               <a
                 href="#contact"
-                className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-zinc-300 transition hover:border-white/20 hover:bg-white/5"
+                className="rounded-full border border-white/10 bg-white/[0.02] px-6 py-3 text-sm font-medium text-zinc-300 transition-all duration-300 hover:border-blue-400/40 hover:bg-blue-500/10 hover:text-white"
               >
                 Contact Me
               </a>
@@ -92,7 +98,7 @@ export default function Home() {
                 href="https://github.com/aqiljas"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors duration-200 hover:text-white"
+                className="transition-colors duration-200 hover:text-blue-400"
               >
                 GitHub ↗
               </a>
@@ -101,7 +107,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/aqil-jasoor-482390385/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors duration-200 hover:text-white"
+                className="transition-colors duration-200 hover:text-blue-400"
               >
                 LinkedIn ↗
               </a>
@@ -110,8 +116,10 @@ export default function Home() {
 
           {/* RIGHT SIDE */}
           <div className="relative">
+            {/* Glow */}
             <div className="absolute inset-0 rounded-full bg-blue-500/10 blur-3xl" />
 
+            {/* Card */}
             <div className="relative rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur-xl sm:p-8">
               {/* Card Header */}
               <div className="mb-10 flex items-center justify-between">
@@ -148,7 +156,7 @@ export default function Home() {
                 ].map((item) => (
                   <div
                     key={item}
-                    className="rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-zinc-300 transition duration-200 hover:border-blue-400/30 hover:bg-blue-500/5"
+                    className="rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-zinc-300 transition-all duration-200 hover:border-blue-400/30 hover:bg-blue-500/5"
                   >
                     {item}
                   </div>
@@ -159,40 +167,47 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTIONS */}
+      {/* CREDIBILITY */}
       <Reveal>
         <CredibilityStrip />
       </Reveal>
 
+      {/* ABOUT */}
       <Reveal>
         <About />
       </Reveal>
 
-      <Reveal>
+      {/* EXPERIENCE */}
+      <Reveal delay={80}>
         <Experience />
       </Reveal>
 
-      <Reveal>
+      {/* PROJECTS */}
+      <Reveal delay={100}>
         <Projects />
       </Reveal>
 
-      <Reveal>
+      {/* SKILLS */}
+      <Reveal delay={80}>
         <Skills />
       </Reveal>
 
-      <Reveal>
+      {/* PRODUCT OPERATIONS */}
+      <Reveal delay={100}>
         <ProductOperations />
       </Reveal>
 
-      <Reveal>
+      {/* CERTIFICATIONS */}
+      <Reveal delay={80}>
         <Education />
       </Reveal>
 
-      <Reveal>
+      {/* CONTACT */}
+      <Reveal delay={100}>
         <Contact />
       </Reveal>
 
-      <Footer />
+      {/* ONE FOOTER ONLY */}
       <Footer />
     </main>
   );

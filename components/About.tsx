@@ -1,23 +1,4 @@
 export default function About() {
-  const details = [
-    {
-      label: "Based In",
-      value: "Riyadh, Saudi Arabia",
-    },
-    {
-      label: "Focus",
-      value: "Software Engineering · Product Operations",
-    },
-    {
-      label: "Education",
-      value: "BSc (Hons) Software Engineering",
-    },
-    {
-      label: "Interests",
-      value: "AI · SaaS · Cyber Security · Product Engineering",
-    },
-  ];
-
   return (
     <section
       id="about"
@@ -33,53 +14,30 @@ export default function About() {
           <span>About</span>
         </div>
 
-        <div className="grid gap-14 lg:grid-cols-[1.2fr_0.8fr] lg:gap-20">
-          {/* Left side */}
-          <div>
-            <h2 className="max-w-3xl text-4xl font-semibold tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl">
-              Engineering mindset.
-              <span className="block text-zinc-500">Product perspective.</span>
-            </h2>
+        <div className="max-w-4xl">
+          <h2 className="text-4xl font-semibold tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl">
+            Engineering mindset.
+            <span className="block text-zinc-500">Product perspective.</span>
+          </h2>
 
-            <div className="mt-8 max-w-3xl space-y-5 text-base leading-8 text-zinc-400">
-              <p>
-                I&apos;m a Software Engineer with experience building modern,
-                responsive web applications across frontend and full-stack
-                development.
-              </p>
+          <div className="mt-8 max-w-3xl space-y-5 text-base leading-8 text-zinc-400">
+            <p>
+              I&apos;m a Software Engineer with experience building modern,
+              responsive web applications across frontend and full-stack
+              development.
+            </p>
 
-              <p>
-                My experience has expanded into Product Operations, where I work
-                with product workflows, Jira, documentation, research,
-                prioritization, and cross-functional collaboration.
-              </p>
+            <p>
+              My experience has expanded into Product Operations, where I work
+              with product workflows, Jira, documentation, research,
+              prioritization, and cross-functional collaboration.
+            </p>
 
-              <p>
-                This combination allows me to understand not only how digital
-                products are built, but also how they are planned, managed,
-                improved, and delivered to users.
-              </p>
-            </div>
-          </div>
-
-          {/* Right side */}
-          <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            {details.map((detail, index) => (
-              <div
-                key={detail.label}
-                className={`p-6 sm:p-7 ${
-                  index !== details.length - 1 ? "border-b border-white/10" : ""
-                }`}
-              >
-                <p className="mb-2 text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
-                  {detail.label}
-                </p>
-
-                <p className="text-sm leading-6 text-zinc-300 sm:text-base">
-                  {detail.value}
-                </p>
-              </div>
-            ))}
+            <p>
+              This combination allows me to understand not only how digital
+              products are built, but also how they are planned, managed,
+              improved, and delivered to users.
+            </p>
           </div>
         </div>
       </div>
